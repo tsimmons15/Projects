@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching bank data from the server.</p>
+
+<p *ngIf="!bankData"><em>Loading...</em></p>
+
+<p> {{ bankData.name }} </p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="bankData">
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ bankData.accountNumber }}</td>
+      <td>{{ bankData.name }}</td>
+    </tr>
+  </tbody>
+</table>
